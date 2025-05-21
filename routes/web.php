@@ -1,7 +1,10 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BlogController;
 // kalau di java pakai import, kalau di php use
+// banyak controller, maka banyak diuse
 
 // di java memanggil sebuah kelas dengan ; sedangkan kalau di php menggunkan ::
 Route::get('welcome', function () {
@@ -45,7 +48,14 @@ Route::get('index', function() {
 Route::get('frontend', function () {
     return view('frontend');
 });
-
-
+Route::get('dosen', [Link::class, 'index'] );
+Route::get('/pegawai/{nama}', [PegawaiController::class, 'index'] );
+Route::get('/formulir', [PegawaiController::class, 'formulir'] );
+// sifatnya rahaasia
+Route::post('/formulir/proses', [PegawaiController::class, 'proses'] );
+// route blog
+Route::get('/blog', [BlogController::class, 'home'] );
+Route::get('/blog/tentang', [BlogController::class, 'tentang'] );
+Route::get('/blog/kontak', [BlogController::class, 'kontak'] );
 
 
