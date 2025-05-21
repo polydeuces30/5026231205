@@ -4,7 +4,7 @@ use App\Http\Controllers\Link;
 // kalau di java pakai import, kalau di php use
 
 // di java memanggil sebuah kelas dengan ; sedangkan kalau di php menggunkan ::
-Route::get('/', function () {
+Route::get('welcome', function () {
     return view('welcome');
 });
 Route::get('halo', function () {
@@ -15,3 +15,37 @@ Route::get('blog', function () {
 });
 Route::get('hello', [Link::class, 'helloworld'] );
 // jika berupa controller gunakan []
+Route::get('bootstrap1', function() {
+    return view('bootstrap1');
+});
+Route::get('cobapertama', function() {
+    return view('cobapertama');
+});
+Route::get('js1', function() {
+    return view('js1');
+});
+Route::get('js2', function() {
+    return view('js2');
+});
+Route::get('pertama', function() {
+    return view('pertama');
+});
+Route::get('pertemuan4', function() {
+    return view('pertemuan4');
+});
+Route::get('template1', function() {
+    return view('template1');
+});
+Route::get('tugaslinktree', function() {
+    return view('tugaslinktree');
+});
+Route::get('index', function() {
+    return view('index');
+});
+Route::get('frontend', function () {
+    return view('frontend');
+});
+
+
+
+

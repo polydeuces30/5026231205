@@ -1,0 +1,27 @@
+body {
+    background-color: beige;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Inter';
+}
+p {
+    color: chocolate;
+}
+a:link{
+    text-decoration: none;
+    color: brown;
+}
+a:visited{
+    text-decoration: none;
+    color: burlywood;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(252, 155, 199);
+    font-weight: bold;
+}
+
+.formatheader{
+    font-size: larger;
+}
+
