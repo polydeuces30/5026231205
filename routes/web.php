@@ -4,6 +4,7 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\LampuController;
 use Illuminate\Support\Facades\DB;
 // kalau di java pakai import, kalau di php use
 // banyak controller, maka banyak diuse
@@ -66,3 +67,11 @@ Route::post('/pegawai/store', [PegawaiController::class, 'store'] );
 Route::post('/pegawai/update', [PegawaiController::class, 'update'] );
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus'] );
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari'] );
+// crud lampu
+Route::get('/lampu/', [LampuController::class, 'lampu'] );
+Route::get('/lampu/tambah', [LampuController::class, 'tambahlampu'] );
+Route::get('/lampu/edit/{id}', [LampuController::class, 'editlampu'] );
+Route::post('/lampu/store', [LampuController::class, 'store'] );
+Route::post('/lampu/update', [LampuController::class, 'update'] );
+Route::get('/lampu/hapus/{id}', [LampuController::class, 'hapus'] );
+Route::get('/lampu/cari', [LampuController::class, 'cari'] );
