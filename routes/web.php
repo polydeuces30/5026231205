@@ -5,6 +5,7 @@ use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\LampuController;
+use App\Http\Controllers\KeranjangBelanjaController;
 use Illuminate\Support\Facades\DB;
 // kalau di java pakai import, kalau di php use
 // banyak controller, maka banyak diuse
@@ -75,3 +76,11 @@ Route::post('/lampu/store', [LampuController::class, 'store'] );
 Route::post('/lampu/update', [LampuController::class, 'update'] );
 Route::get('/lampu/hapus/{id}', [LampuController::class, 'hapus'] );
 Route::get('/lampu/cari', [LampuController::class, 'cari'] );
+// crud keranjang belanja
+Route::get('/keranjangbelanja/', [KeranjangBelanjaController::class, 'keranjangbelanja'] );
+Route::get('/keranjangbelanja/tambah', [KeranjangBelanjaController::class, 'tambahkeranjangbelanja'] );
+// Route::get('/keranjangbelanja/edit/{id}', [KeranjangBelanjaController::class, 'editkeranjangbelanja'] );
+Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class, 'store'] );
+Route::post('/keranjangbelanja/update', [KeranjangBelanjaController::class, 'update'] );
+Route::get('/keranjangbelanja/hapus/{id}', [KeranjangBelanjaController::class, 'hapus'] );
+// Route::get('/keranjangbelanja/cari', [KeranjangBelanjaController::class, 'cari'] );
