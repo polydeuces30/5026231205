@@ -33,19 +33,19 @@
                 <a class="nav-link" href="/pegawai">Pegawai</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tugas CRUD</a>
+                <a class="nav-link" href="/lampu">Tugas CRUD</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">EAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 1</a>
+                <a class="nav-link" href="/keranjangbelanja">Latihan 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 2</a>
+                <a class="nav-link" href="/karyawan">Latihan 2</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 3</a>
+                <a class="nav-link" href="/karyawan2">Latihan 3</a>
             </li>
         </ul>
     </nav>

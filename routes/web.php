@@ -6,7 +6,10 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\LampuController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\Karyawan2Controller;
 use Illuminate\Support\Facades\DB;
+
 // kalau di java pakai import, kalau di php use
 // banyak controller, maka banyak diuse
 
@@ -60,6 +63,7 @@ Route::post('/formulir/proses', [Pegawai2Controller::class, 'proses'] ); // sifa
 Route::get('/blog', [BlogController::class, 'home'] );
 Route::get('/blog/tentang', [BlogController::class, 'tentang'] );
 Route::get('/blog/kontak', [BlogController::class, 'kontak'] );
+
 // crud pegawai
 Route::get('/pegawai/', [PegawaiController::class, 'index'] );
 Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah'] );
@@ -68,6 +72,7 @@ Route::post('/pegawai/store', [PegawaiController::class, 'store'] );
 Route::post('/pegawai/update', [PegawaiController::class, 'update'] );
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus'] );
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari'] );
+
 // crud lampu
 Route::get('/lampu/', [LampuController::class, 'lampu'] );
 Route::get('/lampu/tambah', [LampuController::class, 'tambahlampu'] );
@@ -76,6 +81,7 @@ Route::post('/lampu/store', [LampuController::class, 'store'] );
 Route::post('/lampu/update', [LampuController::class, 'update'] );
 Route::get('/lampu/hapus/{id}', [LampuController::class, 'hapus'] );
 Route::get('/lampu/cari', [LampuController::class, 'cari'] );
+
 // crud keranjang belanja
 Route::get('/keranjangbelanja/', [KeranjangBelanjaController::class, 'keranjangbelanja'] );
 Route::get('/keranjangbelanja/tambah', [KeranjangBelanjaController::class, 'tambahkeranjangbelanja'] );
@@ -84,3 +90,15 @@ Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class, 'stor
 Route::post('/keranjangbelanja/update', [KeranjangBelanjaController::class, 'update'] );
 Route::get('/keranjangbelanja/hapus/{id}', [KeranjangBelanjaController::class, 'hapus'] );
 // Route::get('/keranjangbelanja/cari', [KeranjangBelanjaController::class, 'cari'] );
+
+//route karyawan
+Route::get('/karyawan/', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+
+//crud karyawan2
+Route::get('/karyawan2', [Karyawan2Controller::class, 'index']);
+Route::get('/karyawan2/tambah', [Karyawan2Controller::class, 'tambah']);
+Route::post('/karyawan2/store', [Karyawan2Controller::class, 'store']);
+Route::get('/karyawan2/hapus/{id}', [Karyawan2Controller::class, 'hapus']);
