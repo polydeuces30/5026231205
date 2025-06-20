@@ -11,9 +11,9 @@ class KeranjangBelanjaController extends Controller
     public function keranjangbelanja()
     {
     	// mengambil data dari table keranjangbelanja
-		// $keranjangbelanja = DB::table('keranjangbelanja')->get();
+		$keranjangbelanja = DB::table('keranjangbelanja')->get();
         // membuat pagination
-        $keranjangbelanja = DB::table('keranjangbelanja')->paginate(10); // jumlah araay per halaman , default 15
+        // $keranjangbelanja = DB::table('keranjangbelanja')->paginate(10); // jumlah araay per halaman , default 15
     	// mengirim data keranjangbelanja ke view index
     	return view('blog/keranjangbelanjaview',['keranjangbelanja' => $keranjangbelanja]);
 

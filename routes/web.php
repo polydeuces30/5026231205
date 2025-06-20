@@ -8,13 +8,14 @@ use App\Http\Controllers\LampuController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\Karyawan2Controller;
+use App\Http\Controllers\MyKaryawanController;
 use Illuminate\Support\Facades\DB;
 
 // kalau di java pakai import, kalau di php use
 // banyak controller, maka banyak diuse
 
 // di java memanggil sebuah kelas dengan ; sedangkan kalau di php menggunkan ::
-Route::get('welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 Route::get('halo', function () {
@@ -102,3 +103,9 @@ Route::get('/karyawan2', [Karyawan2Controller::class, 'index']);
 Route::get('/karyawan2/tambah', [Karyawan2Controller::class, 'tambah']);
 Route::post('/karyawan2/store', [Karyawan2Controller::class, 'store']);
 Route::get('/karyawan2/hapus/{id}', [Karyawan2Controller::class, 'hapus']);
+
+//crud soal eas (sudah disiapkan)
+Route::get('/eas', [MyKaryawanController::class, 'index']);
+Route::get('/eas/edit', [MyKaryawanController::class, 'edit']);
+Route::post('/eas/view', [MyKaryawanController::class, 'view']);
+

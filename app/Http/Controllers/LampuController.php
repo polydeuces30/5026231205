@@ -27,7 +27,7 @@ class LampuController extends Controller
 
 	}
     // method untuk edit data lampu
-	public function editlampu($ID)
+	public function edit($ID)
 	{
 		// mengambil data lampu berdasarkan id yang dipilih
 		$lampu = DB::table('lampu')->where('ID',$ID)->get();
@@ -36,26 +36,6 @@ class LampuController extends Controller
         //->get()
 		// passing data lampu yang didapat ke view edit.blade.php
 		return view('blog/editlampu',['lampu' => $lampu]);
-
-	}
-    // method untuk insert data ke table lampu
-	public function store(Request $request)
-	{
-		// Debug untuk melihat data yang dikirim
-		// dd($request->all()); // Uncomment untuk debug
-
-		// insert data ke table lampu
-		DB::table('lampu')->insert([
-		    // Jika ID auto increment, hapus baris ini
-		    // 'ID' => $request->ID,
-		    'merklampu' => $request->merklampu, // Pastikan name di form adalah 'merklampu'
-		    'hargalampu' => $request->hargalampu, // Pastikan name di form adalah 'hargalampu'
-		    'berat' => $request->berat, // Pastikan name di form adalah 'berat'
-		    'tersedia' => $request->has('tersedia') ? 1 : 0 // Menangani toggle button
-		]);
-
-		// alihkan halaman ke halaman lampu dengan pesan sukses
-		return redirect('/lampu')->with('success', 'Data lampu berhasil ditambahkan!');
 
 	}
     // update data lampu

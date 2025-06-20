@@ -39,5 +39,5 @@
 		<tr class="table-info">
 		</tr>
 	</table>
-{{ $keranjangbelanja ->links() }}
+{{-- {{ $keranjangbelanja ->links() }} --}}
 @endsection
